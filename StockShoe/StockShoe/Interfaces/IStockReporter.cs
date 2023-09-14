@@ -8,6 +8,6 @@ namespace StockShoe.Interfaces
 {
     public interface IStockReporter
     {
-        void GenerateStockreport();
+        void GenerateStockReport();
     }
 }
