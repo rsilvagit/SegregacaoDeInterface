@@ -14,12 +14,7 @@ namespace StockShoe
         static void Main(string[] args)
         {
             var stockManager = new ConsoleStockManager();
-            //IStockReader stockReader = new ConsoleStockManager();
-            //IStockReporter stockReporter = new ConsoleStockManager();
-            //IStockWriter stockWriter = new ConsoleStockManager();
-
-
-
+            
             while (true)
             {
                 Console.WriteLine("Escolha a opção desejada:");
