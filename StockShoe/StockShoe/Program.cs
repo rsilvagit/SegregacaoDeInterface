@@ -14,9 +14,9 @@ namespace StockShoe
         static void Main(string[] args)
         {
             var stockManager = new ConsoleStockManager();
-            IStockReader stockReader = new ConsoleStockManager();
-            IStockReporter stockReporter = new ConsoleStockManager();
-            IStockWriter stockWriter = new ConsoleStockManager();
+            //IStockReader stockReader = new ConsoleStockManager();
+            //IStockReporter stockReporter = new ConsoleStockManager();
+            //IStockWriter stockWriter = new ConsoleStockManager();
 
 
 
@@ -89,7 +89,7 @@ namespace StockShoe
                         } while (!isValidPrice);
 
                         Shoe newShoe = new Shoe { Id = id, Name = name, Quantity = quantity, Price = price };
-                        stockWriter.AddShoe(newShoe);
+                        stockManager.AddShoe(newShoe);
                         Console.WriteLine("Calçado adicionado ao estoque com sucesso!");
                         break;
                     case "2":
@@ -109,7 +109,7 @@ namespace StockShoe
                             }
                         } while (!isValidIdToFind);
 
-                        Shoe foundShoe = stockReader.GetShoeById(idToFind);
+                        Shoe foundShoe = stockManager.GetShoeById(idToFind);
 
                         if (foundShoe != null)
                         {
@@ -140,7 +140,7 @@ namespace StockShoe
 
                         try
                         {
-                            stockWriter.RemoveShoe(idToRemove);
+                            stockManager.RemoveShoe(idToRemove);
                             Console.WriteLine("Calçado removido com sucesso!");
                         }
                         catch
@@ -150,7 +150,7 @@ namespace StockShoe
                         break;
 
                     case "4":
-                        stockReporter.GenerateStockReport();
+                        stockManager.GenerateStockReport();
                         break;
 
                     case "5":

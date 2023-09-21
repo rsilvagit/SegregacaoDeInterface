@@ -17,7 +17,7 @@ namespace StockShoe.Services
             Console.WriteLine("Relatório de Estoque:");
             foreach (var shoe in stock)
             {
-                Console.WriteLine($"ID: {shoe.Id}| Nome: {shoe.Name}| Quantidade: {shoe.Quantity}| Preço: {shoe.Price:C}");
+                Console.WriteLine($"ID: {shoe.Id} | Nome: {shoe.Name} | Quantidade: {shoe.Quantity}| Preço: {shoe.Price:C}");
             }
         }
 
